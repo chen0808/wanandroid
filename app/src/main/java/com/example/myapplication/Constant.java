@@ -6,4 +6,5 @@ package com.example.myapplication;
  */
 class Constant {
     static final String BASE_URL = "https://www.wanandroid.com/";
+
 }
