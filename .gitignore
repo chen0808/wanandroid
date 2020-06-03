@@ -11,7 +11,7 @@
 .idea/misc.xml
 .idea/runConfigurations.xml
 .idea/vcs.xml
-/gradlew
+gradlew
 app/libs/
 app/src/androidTest/
 app/src/test/
