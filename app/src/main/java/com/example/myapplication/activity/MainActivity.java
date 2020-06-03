@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.activity;
 
 import android.os.Bundle;
 import android.widget.TextView;
@@ -6,9 +6,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.myapplication.R;
 import com.example.myapplication.bean.ArticleBean;
 import com.example.myapplication.bean.BaseBean;
 import com.example.myapplication.bean.DatasBean;
+import com.example.myapplication.net.RetrofitHelper;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -26,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        RetrofitHelper.getServer().mainList(0).enqueue(new Callback<BaseBean<ArticleBean<DatasBean>>>() {
+        RetrofitHelper.getRequest().mainList(0).enqueue(new Callback<BaseBean<ArticleBean<DatasBean>>>() {
             @Override
             public void onResponse(@NonNull Call<BaseBean<ArticleBean<DatasBean>>> call, @NonNull Response<BaseBean<ArticleBean<DatasBean>>> response) {
                 if (response.body() != null) {

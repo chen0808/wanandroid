@@ -25,19 +25,23 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.2.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     //retrofit
-    implementation 'com.squareup.retrofit2:retrofit:2.6.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    //rxJavaAdapter
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
+    //log依赖，打印log需要
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.7.2'
     //将requestBody转化成实体类
-    implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     //gson
-    implementation 'com.google.code.gson:gson:2.8.6'
+//    implementation 'com.google.code.gson:gson:2.8.6'
     //rxJava
+    implementation "io.reactivex.rxjava2:rxjava:2.2.19"
+    //rxAndroid,切换线程
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
 
     //butterKnife
-    annotationProcessor 'com.jakewharton:butterknife:10.2.0'
+    implementation 'com.jakewharton:butterknife:10.2.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+
 }

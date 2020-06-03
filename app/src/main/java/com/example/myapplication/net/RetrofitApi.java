@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.net;
 
 import com.example.myapplication.bean.ArticleBean;
 import com.example.myapplication.bean.BannerBean;
@@ -14,6 +14,7 @@ import com.example.myapplication.bean.UserBean;
 
 import java.util.List;
 
+import io.reactivex.Observable;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
@@ -24,7 +25,7 @@ import retrofit2.http.Query;
  * 作者：陈飞
  * 时间：2019/11/06 11:43
  */
-public interface RetrofitService {
+public interface RetrofitApi {
     //首页列表
     @GET("article/list/{page}/json")
     Call<BaseBean<ArticleBean<DatasBean>>> mainList(
@@ -72,8 +73,7 @@ public interface RetrofitService {
 
     //登录
     @POST("user/login")
-    Call<BaseBean<UserBean>> login(
-//            @Field("username")String username,
+    Observable<BaseBean<UserBean>> login(
             @Query("username") String username,
             @Query("password") String password);
 

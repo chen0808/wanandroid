@@ -21,6 +21,7 @@
         android:orientation="vertical">
 
         <EditText
+            android:id="@+id/et_username"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="@drawable/shape_login_edit_bg"
@@ -29,6 +30,7 @@
             tools:ignore="Autofill,LabelFor,RtlSymmetry,TextFields" />
 
         <EditText
+            android:id="@+id/et_password"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginTop="20dp"
@@ -38,6 +40,7 @@
             tools:ignore="Autofill,LabelFor,RtlSymmetry,TextFields" />
 
         <Button
+            android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="30dp"
@@ -46,6 +49,7 @@
             android:textColor="@drawable/selector_login_text_color" />
 
         <TextView
+            android:id="@+id/tv_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
